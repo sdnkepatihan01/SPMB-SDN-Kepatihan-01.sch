@@ -341,7 +341,7 @@ body.dark-mode .btn-outline-primary {
 }
 
 /* New styles for graduation check */
-.graduation-container {
+.announcement-container {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -350,43 +350,37 @@ body.dark-mode .btn-outline-primary {
     max-width: 800px;
 }
 
-.graduation-header {
-    background: linear-gradient(135deg, var(--secondary), #a80c2c);
+.announcement-header {
+    background: linear-gradient(135deg, #1a237e, #283593);
     color: white;
     padding: 30px;
     text-align: center;
     position: relative;
 }
 
-.graduation-header h2 {
+.announcement-header h2 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 10px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-.graduation-header p {
-    font-size: 18px;
-    margin-bottom: 0;
-    opacity: 0.9;
-}
-
-.graduation-body {
+.announcement-body {
     padding: 40px;
 }
 
-.graduation-form {
+.check-form {
     margin-bottom: 30px;
 }
 
-.graduation-form label {
+.check-form label {
     font-weight: 600;
-    color: var(--secondary);
+    color: #333;
     margin-bottom: 10px;
     display: block;
 }
 
-.graduation-form input {
+.check-form input {
     width: 100%;
     padding: 15px;
     border: 2px solid #ddd;
@@ -395,15 +389,15 @@ body.dark-mode .btn-outline-primary {
     transition: all 0.3s;
 }
 
-.graduation-form input:focus {
+.check-form input:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.2);
     outline: none;
 }
 
 .check-btn {
-    background: linear-gradient(135deg, var(--primary), #ffc800);
-    color: #333;
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: white;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -413,42 +407,74 @@ body.dark-mode .btn-outline-primary {
     transition: all 0.3s;
     width: 100%;
     margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
 }
 
 .check-btn:hover {
-    background: linear-gradient(135deg, #ffc800, var(--primary));
+    background: linear-gradient(135deg, #283593, #1a237e);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+    box-shadow: 0 8px 20px rgba(26, 35, 126, 0.4);
 }
 
-.result-card {
-    border-radius: 10px;
-    margin-top: 20px;
+/* New result display style */
+.result-display {
     display: none;
-    padding: 25px;
-    background-color: #f9f9f9;
-    border-left: 5px solid var(--secondary);
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.accepted {
-    background-color: #e8f5e9;
-    border-left: 5px solid #4caf50;
+.result-header {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.rejected {
-    background-color: #ffebee;
-    border-left: 5px solid #f44336;
+.result-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.result-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.result-content {
+    padding: 30px;
+    background-color: #f8f9fa;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.result-label {
+    font-weight: 600;
+    color: #333;
+    width: 180px;
+    flex-shrink: 0;
+}
+
+.result-value {
+    font-weight: 500;
+    color: #555;
+    flex-grow: 1;
 }
 
 .status-badge {
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
     display: inline-block;
-    margin-bottom: 20px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 .status-accepted {
@@ -462,7 +488,7 @@ body.dark-mode .btn-outline-primary {
 }
 
 .download-btn {
-    background: linear-gradient(135deg, var(--secondary), #a80c2c);
+    background: linear-gradient(135deg, #1a237e, #283593);
     border: none;
     border-radius: 30px;
     padding: 12px 30px;
@@ -471,38 +497,21 @@ body.dark-mode .btn-outline-primary {
     transition: all 0.3s;
     margin-top: 20px;
     display: inline-block;
+    text-decoration: none;
 }
 
 .download-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(220, 20, 60, 0.3);
+    box-shadow: 0 10px 20px rgba(26, 35, 126, 0.3);
     color: white;
 }
 
-.result-title {
-    color: var(--secondary);
-    font-weight: 700;
-    margin-bottom: 20px;
-    font-size: 22px;
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 10px;
-}
-
-.result-item {
-    margin-bottom: 15px;
-}
-
-.result-label {
-    font-weight: 600;
+.result-footer {
+    background-color: #e8eaf6;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
     color: #555;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.result-value {
-    font-weight: 500;
-    color: #333;
-    font-size: 16px;
 }
 
 /* Jadwal Daftar Ulang Styles */
@@ -536,20 +545,26 @@ body.dark-mode #jadwalDaftarUlang {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .graduation-header {
+    .announcement-header {
         padding: 20px;
     }
     
-    .graduation-header h2 {
+    .announcement-header h2 {
         font-size: 24px;
     }
     
-    .graduation-body {
+    .announcement-body {
         padding: 20px;
     }
     
-    .result-title {
-        font-size: 20px;
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .result-label {
+        width: 100%;
+        margin-bottom: 5px;
     }
 }
 
@@ -680,14 +695,14 @@ body.dark-mode #jadwalDaftarUlang {
 <div class="tab-pane" id="info-spmb">
 <section class="py-5">
 <div class="container">
-<div class="graduation-container">
-    <div class="graduation-header">
+<div class="announcement-container">
+    <div class="announcement-header">
         <img src="logosekolah.png" alt="Logo SDN Kepatihan 01" class="school-logo">
         <h2>PENGUMUMAN KELULUSAN</h2>
         <p>SDN KEPATIHAN 01 - Tahun Pelajaran 2025/2026</p>
     </div>
-    <div class="graduation-body">
-        <div class="graduation-form">
+    <div class="announcement-body">
+        <div class="check-form">
             <label for="inputNik">Silahkan Masukkan NIK Pada Form Dibawah</label>
             <input type="text" id="inputNik" placeholder="Masukkan 16 digit NIK">
             <button class="check-btn" id="btnCekKelulusan">
@@ -695,34 +710,42 @@ body.dark-mode #jadwalDaftarUlang {
             </button>
         </div>
         
-        <div id="resultContainer" class="result-card">
-            <h4 class="result-title">HASIL PENERIMAAN</h4>
-            <span id="statusBadge" class="status-badge"></span>
-            
-            <div class="result-item">
-                <span class="result-label">Nomor Pendaftaran</span>
-                <span id="resultNoPendaftaran" class="result-value">-</span>
+        <div id="resultDisplay" class="result-display">
+            <div class="result-header">
+                <h3 class="result-title">HASIL SELEKSI PENERIMAAN MURID BARU</h3>
+                <p class="result-subtitle">SDN KEPATIHAN 01 - Tahun Pelajaran 2025/2026</p>
             </div>
-            
-            <div class="result-item">
-                <span class="result-label">Nama Siswa</span>
-                <span id="resultNama" class="result-value">-</span>
+            <div class="result-content">
+                <span id="statusBadge" class="status-badge"></span>
+                
+                <div class="result-item">
+                    <span class="result-label">Nomor Pendaftaran</span>
+                    <span class="result-value" id="resultNoPendaftaran">-</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Nama Siswa</span>
+                    <span class="result-value" id="resultNama">-</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">Tempat/Tgl Lahir</span>
+                    <span class="result-value" id="resultTtl">-</span>
+                </div>
+                
+                <div class="result-item">
+                    <span class="result-label">NIK</span>
+                    <span class="result-value" id="resultNik">-</span>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="#" id="downloadBtn" class="download-btn">
+                        <i class="fas fa-download me-2"></i> Unduh Hasil
+                    </a>
+                </div>
             </div>
-            
-            <div class="result-item">
-                <span class="result-label">Tempat/Tgl Lahir</span>
-                <span id="resultTtl" class="result-value">-</span>
-            </div>
-            
-            <div class="result-item">
-                <span class="result-label">NIK</span>
-                <span id="resultNik" class="result-value">-</span>
-            </div>
-            
-            <div class="text-center">
-                <button id="downloadBtn" class="download-btn">
-                    <i class="fas fa-download me-2"></i> Unduh Hasil
-                </button>
+            <div class="result-footer">
+                Dokumen ini dicetak secara otomatis pada <span id="printDate"></span>
             </div>
         </div>
         
@@ -1357,10 +1380,13 @@ body.dark-mode #jadwalDaftarUlang {
         ];
 
         document.addEventListener('DOMContentLoaded', function() {
+            // Set current date
+            document.getElementById('printDate').textContent = new Date().toLocaleString();
+            
             // Cek kelulusan berdasarkan NIK
             document.getElementById('btnCekKelulusan').addEventListener('click', function() {
                 const nik = document.getElementById('inputNik').value.trim();
-                const resultContainer = document.getElementById('resultContainer');
+                const resultDisplay = document.getElementById('resultDisplay');
                 const statusBadge = document.getElementById('statusBadge');
                 const jadwalDaftarUlang = document.getElementById('jadwalDaftarUlang');
                 
@@ -1390,24 +1416,22 @@ body.dark-mode #jadwalDaftarUlang {
                     
                     // Set kelas berdasarkan status
                     if (status === "DITERIMA") {
-                        resultContainer.className = "result-card p-4 mt-4 accepted";
                         statusBadge.className = "status-badge status-accepted";
                         jadwalDaftarUlang.style.display = 'block';
                         launchConfetti();
                     } else {
-                        resultContainer.className = "result-card p-4 mt-4 rejected";
                         statusBadge.className = "status-badge status-rejected";
                         jadwalDaftarUlang.style.display = 'none';
                     }
                     
                     // Tampilkan hasil
-                    resultContainer.style.display = 'block';
+                    resultDisplay.style.display = 'block';
                     
                     // Scroll ke hasil
-                    resultContainer.scrollIntoView({ behavior: 'smooth' });
+                    resultDisplay.scrollIntoView({ behavior: 'smooth' });
                 } else {
                     alert('Data tidak ditemukan. Pastikan NIK yang dimasukkan benar.');
-                    resultContainer.style.display = 'none';
+                    resultDisplay.style.display = 'none';
                     jadwalDaftarUlang.style.display = 'none';
                 }
             });
