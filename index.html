@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SPMB SDN Kepatihan 01 - Tahun Ajaran 2025/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        :root {
+            --primary: #FFD700; /* Kuning */
+            --secondary: #DC143C; /* Merah */
+            --light: #FFFFFF; /* Putih */
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--light) !important;
+        }
+        
+        .nav-link {
+            color: var(--light) !important;
+            font-weight: 500;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-3px) scale(1.05);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            color: var(--light);
+            padding: 100px 0;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            transform: translateZ(-1px) scale(1.2);
+        }
+        
+        .section-title {
+            color: var(--secondary);
+            font-weight: 700;
+            position: relative;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--primary);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+            font-weight: 600;
+            border-radius: 10px 10px 0 0 !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            font-weight: 600;
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #b80c2c;
+            border-color: #b80c2c;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline-primary {
+            color: var(--secondary);
+            border-color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline-light {
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 0.7s;
+        }
+        
+        .btn-outline-light:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .school-info {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .principal-message {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .principal-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .gallery-item {
+            margin-bottom: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .coming-soon {
+            text-align: center;
+            padding: 50px 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+            border-radius: 10px;
+            margin: 30px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Animasi Keyframes */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .social-icons a {
+            color: var(--light);
+            font-size: 20px;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            color: var(--light);
+        }
+        
+        /* Tab System */
+        .tab-content {
+            padding: 20px 0;
+        }
+        
+        .tab-pane {
+            display: none;
+        }
+        
+        .tab-pane.active {
+            display: block;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Confetti Canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        
+        /* Animasi untuk logo */
+        .navbar-brand img {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+        }
+    
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+#backToTopBtn:hover {
+  background-color: #b80c2c;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark-mode .navbar,
+body.dark-mode footer {
+  background: #333 !important;
+}
+body.dark-mode .card,
+body.dark-mode .school-info,
+body.dark-mode .principal-message {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+body.dark-mode .btn,
+body.dark-mode .btn-outline-primary {
+  border-color: #f1f1f1;
+}
+
+/* New styles for graduation check */
+.graduation-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.graduation-header {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.graduation-body {
+    padding: 30px;
+}
+
+.result-card {
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+}
+
+.accepted {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+}
+
+.rejected {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+}
+
+.status-badge {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.status-accepted {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status-rejected {
+    background-color: #f44336;
+    color: white;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(78, 84, 200, 0.3);
+    color: white;
+}
+
+</style>
+</head>
+<body>
+<!-- Canvas untuk Confetti -->
+<canvas id="confetti-canvas"></canvas>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#" onclick="openTab('beranda')">
+<img alt="Logo SDN Kepatihan 01" class="me-2" height="40" src="logosekolah.png"/>
+                SDN KEPATIHAN 01
+            </a>
+<button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link active" href="#" onclick="openTab('beranda')">Beranda</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="openTab('profil')">Profil Sekolah</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#" onclick="openTab('info-spmb')">Info Kelulusan</a>
+</li>
+<li class="nav-item">
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<!-- Tab System -->
+<div class="container tab-content">
+<!-- Beranda Tab -->
+<div class="tab-pane active" id="beranda">
+<!-- Hero Section -->
+<section class="hero-section">
+<div class="container">
+<h1 class="display-4 fw-bold mb-4" id="typing-text"></h1>
+<h3 class="mb-4">SDN KEPATIHAN 01</h3>
+<p class="lead mb-5">Tahun Ajaran 2025/2026</p>
+<a class="btn btn-outline-light btn-lg" href="#" onclick="openTab('info-spmb')">Info Kelulusan</a>
+</div>
+</section>
+<!-- School Info -->
+<section class="py-5">
+<div class="container">
+<div class="school-info">
+<div class="row">
+<div class="col-md-12">
+<h4 class="fw-bold">Identitas Sekolah</h4>
+<ul class="list-unstyled">
+<li><i class="fas fa-school me-2"></i> Nama Sekolah: SDN Kepatihan 01</li>
+<li><i class="fas fa-id-card me-2"></i> NPSN: 20523608</li>
+<li><i class="fas fa-map-marker-alt me-2"></i> Alamat: Jl. Dr. Soetomo No. 16 Kepatihan Kaliwates Jember</li>
+<li><i class="fas fa-phone me-2"></i> Telepon: 082337606517</li>
+<li><i class="fas fa-envelope me-2"></i> Email: sdnkepsa01@gmail.com</li>
+<li><i class="fas fa-globe me-2"></i> Website: www.sdnkepsa01.sch.id</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Profil Sekolah Tab -->
+<div class="tab-pane" id="profil">
+<!-- Principal Message -->
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="text-center section-title">Sambutan Kepala Sekolah</h2>
+<div class="principal-message text-center">
+<img alt="Kepala Sekolah SDN Kepatihan 01" class="principal-photo" src="fotoks.png"/>
+<p>Assalamu'alaikum warahmatullahi wabarakatuh,</p>
+<p>Puji syukur kita panjatkan ke hadirat Allah SWT, Tuhan Yang Maha Esa, atas limpahan rahmat dan karunia-Nya, kita telah dapat melaksanakan kegiatan Sistem Penerimaan Murid Baru (SPMB) tahun pelajaran 2025-2026, dalam keadaan sehat dan penuh semangat.</p>
+<p>Kegiatan SPMB ini merupakan bagian penting dalam proses regenerasi dan pembinaan murid. SPMB dilaksanakan dengan dua tahap, dimana tahap 1 jalur Afirmasi dan Mutasi serta Tahap 2 jalur domisili.</p>
+<p>Kegiatan SPMB ini adalah tahapan penting dalam menjaring murid baru yang akan menjadi bagian dari keluarga besar SDN Kepatihan 01. Kami menyadari bahwa setiap anak memiliki potensi, dan melalui proses SPMB ini, kami berkomitmen untuk melaksanakannya dengan prinsip adil, transparan, dan akuntabel, serta sesuai dengan ketentuan yang berlaku.</p>
+<p>Terima kasih saya ucapkan kepada panitia, guru, staf, serta semua pihak yang telah mempersiapkan dan mendukung kegiatan ini. Semoga seluruh rangkaian kegiatan SPMB ini berjalan dengan sukses dan memberikan hasil terbaik.</p>
+<p>Wassalamu'alaikum warahmatullahi wabarakatuh.</p>
+<div class="text-center mt-4">
+<h5>Kepala Sekolah</h5>
+<h4 class="fw-bold">Rofiatul Badriyah S.Pd</h4>
+</div>
+</div>
+<div class="row mt-5">
+<div class="col-md-6">
+<div class="card h-100">
+<div class="card-header">
+<h4 class="mb-0">Sejarah Singkat</h4>
+</div>
+<div class="card-body">
+<p>SD Negeri KEPATIHAN 01 merupakan salah satu sekolah jenjang SD berstatus Negeri yang berada di wilayah Kec. Kaliwates, Kab. Jember, Jawa Timur.</p>
+<p>SD Negeri KEPATIHAN 01 didirikan pada tanggal 20 Juni 2007 dengan Nomor SK Pendirian 41 tahun 2007 yang berada dalam naungan Kementerian Pendidikan dan Kebudayaan.</p>
+<p>Dalam kegiatan pembelajaran, sekolah yang memiliki 662 siswa ini dibimbing oleh 32 guru yang profesional di bidangnya. Kepala Sekolah SD Negeri KEPATIHAN 01 saat ini adalah Rofiatul Badriyah.</p>
+<p>Dengan adanya keberadaan SD Negeri KEPATIHAN 01, diharapkan dapat memberikan kontribusi dalam mencerdaskan anak bangsa di wilayah Kec. Kaliwates, Kab. Jember.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card h-100">
+<div class="card-header">
+<h4 class="mb-0">Visi &amp; Misi</h4>
+</div>
+<div class="card-body">
+<h5>Visi:</h5>
+<p>"Unggul dalam Prestasi, Berakhlak Mulia, Berwawasan Lingkungan, dan Berdaya Saing Global."</p>
+<h5 class="mt-4">Misi:</h5>
+<ol>
+<li>Melaksanakan pembelajaran dan bimbingan secara efektif</li>
+<li>Terwujudnya Penguatan Pendidikan Karakter (PPK)</li>
+<li>Mengembangkan potensi peserta didik</li>
+<li>Menumbuhkembangkan bakat dan minat peserta didik</li>
+<li>Menyediakan literasi dasar bagi peserta didik</li>
+</ol>
+<button class="btn btn-sm btn-primary mt-2" data-bs-target="#visiMisiModal" data-bs-toggle="modal">Lihat Selengkapnya</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Info SPMB Tab -->
+<div class="tab-pane" id="info-spmb">
+<section class="py-5">
+<div class="container">
+<h2 class="text-center section-title">Informasi Kelulusan</h2>
+<div class="row justify-content-center mt-4">
+<div class="col-md-8">
+<div class="graduation-card">
+    <div class="graduation-header">
+        <h3><i class="fas fa-search me-2"></i> Cek Status Penerimaan</h3>
+        <p class="mb-0">Masukkan NIK siswa untuk melihat status penerimaan</p>
+    </div>
+    <div class="graduation-body">
+        <div class="mb-3">
+            <label class="form-label" for="inputNik">Nomor Induk Kependudukan (NIK)</label>
+            <input type="text" class="form-control form-control-lg" id="inputNik" placeholder="Masukkan 16 digit NIK">
+        </div>
+        <button class="btn btn-primary w-100 py-2" id="btnCekKelulusan">
+            <i class="fas fa-search me-2"></i> Cek Status
+        </button>
+        
+        <div id="resultContainer" class="result-card p-4 mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">Hasil Penerimaan</h4>
+                <span id="statusBadge" class="status-badge"></span>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-1">Nomor Pendaftaran</h6>
+                        <p id="resultNoPendaftaran" class="fw-bold mb-0">-</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-1">Nama Siswa</h6>
+                        <p id="resultNama" class="fw-bold mb-0">-</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-1">Tempat/Tgl Lahir</h6>
+                        <p id="resultTtl" class="fw-bold mb-0">-</p>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="text-muted mb-1">NIK</h6>
+                        <p id="resultNik" class="fw-bold mb-0">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button id="downloadBtn" class="download-btn">
+                    <i class="fas fa-download me-2"></i> Unduh Hasil
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Formulir Online Tab -->
+</div>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h5>SDN Kepatihan 01</h5>
+<p>Jl. Dr. Soetomo No. 16 Kepatihan Kaliwates Jember</p>
+<p>Email: sdnkepsa01@gmail.com</p>
+<p>Telp: 082337606517</p>
+</div>
+<div class="col-md-4">
+<h5>Jam Operasional</h5>
+<p>Senin - Jumat: 07.00 - 15.00 WIB</p>
+<p>Sabtu: 08.00 - 12.00 WIB</p>
+<p>Minggu &amp; Hari Libur: Tutup</p>
+</div>
+<div class="col-md-4">
+<h5>Ikuti Kami</h5>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+</div>
+</div>
+<hr class="my-4 bg-light"/>
+<div class="text-center">
+<p class="mb-0">© 2025 SDN Kepatihan 01. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Visi Misi Modal -->
+<div aria-hidden="true" aria-labelledby="visiMisiModalLabel" class="modal fade" id="visiMisiModal" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="visiMisiModalLabel">Visi &amp; Misi Lengkap</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<h4>Visi Sekolah</h4>
+<p>"Unggul dalam Prestasi, Berakhlak Mulia, Berwawasan Lingkungan, dan Berdaya Saing Global."</p>
+<h4 class="mt-4">Misi Sekolah</h4>
+<ol>
+<li>Melaksanakan pembelajaran dan bimbingan secara efektif, efisien sesuai karakteristik yang berorientasi ketuntasan pencapaian hasil pembelajaran melalui pengembangan kognitif, efektif dan psikomotor secara simultan</li>
+<li>Terwujudnya Penguatan Pendidikan Karakter (PPK) sebagai fondasi utama dari pembangunan karakter bangsa dan membudayakan perilaku santun, disiplin, jujur, tertib, tanggung jawab, peduli, percaya diri dalam pergaulan dan perilaku taat beribadah serta menjunjung tinggi nilai-nilai agama dan budaya yang luhur.</li>
+<li>Mengembangkan potensi peserta didik dengan mengintegrasikan nilai sikap dalam setiap proses belajar mengajar.</li>
+<li>Menumbuhkembangkan bakat, minat peserta didik dalam segala bidang melalui kegiatan kurikuler dan ekstra kurikuler dalam rangka menghargai prestasi</li>
+<li>Menyediakan literasi dasar bagi peserta didik untuk menerapkan keterampilan dasar sehari-hari seperti : literasi baca tulis, literasi berhitung, literasi sains, literasi teknologi dan komunikasi, literasi finansial dan literasi budaya dan kewarganegaraan.</li>
+<li>Menumbuhkembangkan semangat keunggulan, kebersamaan dalam keragaman, kepekaan sosial dan mengembangkan budaya mutu secara intensif kepada segenap warga sekolah.</li>
+<li>Terwujudnya sekolah yang peduli dan berbudaya lingkungan demi terwujudnya lingkungan yang "Bersinar Terang" (Bersih, Indah, Asri, Rindang, Tertib, Aman, Nyaman dan Tenang)</li>
+<li>Membangun keunggulan melalui pencapaian standar-standar pendidikan setiap tahunnya</li>
+<li>Membangun keunggulan dan daya saing global melalui peningkatan profesionalitas dan integritas PTK, serta pengembangan proses pembelajaran berbasis teknologi informasi dan komunikasi</li>
+<li>Mengembangkan budaya kerjasama yang harmonis dan kondusif bagi semua warga sekolah untuk meningkatkan kreatifitas dan etos kerja yang tinggi.</li>
+</ol>
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-bs-dismiss="modal" type="button">Tutup</button>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+        // Fungsi untuk membuka tab
+        function openTab(tabName) {
+            // Sembunyikan semua tab
+            const tabPanes = document.getElementsByClassName('tab-pane');
+            for (let i = 0; i < tabPanes.length; i++) {
+                tabPanes[i].classList.remove('active');
+            }
+            
+            // Tampilkan tab yang dipilih
+            document.getElementById(tabName).classList.add('active');
+            
+            // Update active state di navbar
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick') === `openTab('${tabName}')`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll ke atas
+            window.scrollTo(0, 0);
+            
+            // Jika tab beranda dibuka, jalankan efek ketikan
+            if (tabName === 'beranda') {
+                document.getElementById('typing-text').innerHTML = '';
+                i = 0;
+                setTimeout(typeWriter, 500);
+            }
+        }
+
+        // Fungsi Confetti
+        function launchConfetti() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#FFD700', '#DC143C', '#FFFFFF'],
+                shapes: ['circle', 'square', 'triangle'],
+                scalar: 1.5
+            });
+        }
+
+        // Fungsi Typing Effect
+        const typingText = document.getElementById('typing-text');
+        const text = "SISTEM PENERIMAAN MURID BARU";
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                typingText.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        // Data dari JSON
+        const graduationData = [
+ {
+  "NO PENDAFTARAN": 2,
+  "NAMA SISWA": "ADERALD ZEROUND JIBRIELALJARAZ",
+  "NIK": "3311082603190000",
+  "TEMPAT TANGGAL LAHIR": "SURAKARTA, 26 Maret 2019",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 4,
+  "NAMA SISWA": "MIKAILA SYAWALIAH DWI BUKHORI",
+  "NIK": "3509064207180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 02 Juli 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 34,
+  "NAMA SISWA": "KAM RAFIFTA DAMARA",
+  "NIK": "3509211404180003",
+  "TEMPAT TANGGAL LAHIR": "PROBOLINGGO, 14 April 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 44,
+  "NAMA SISWA": "SYIFA DELISHA SANDI",
+  "NIK": "3510204805180003",
+  "TEMPAT TANGGAL LAHIR": "BANYUWANGI, 08 Mei 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 53,
+  "NAMA SISWA": "ZHEA AZZALEA VELLANDRA PUTRI",
+  "NIK": "3509197105180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 31 Mei 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 60,
+  "NAMA SISWA": "ABQARI RUNAKO ARSENIO WIRATAMA",
+  "NIK": "3509131104180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 April 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 8,
+  "NAMA SISWA": "QOIS GEMILANG AL FATIH",
+  "NIK": "3509191108180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 9,
+  "NAMA SISWA": "KEVIN ALFA PRAYOGA",
+  "NIK": "3509191305180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 13 Mei 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 10,
+  "NAMA SISWA": "SYAHRIAN ABIMANYU",
+  "NIK": "3509191108180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 12,
+  "NAMA SISWA": "AYLA NABILA",
+  "NIK": "3509195206180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 12 Juni 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 14,
+  "NAMA SISWA": "MUZAMMIL FATIH",
+  "NIK": "3509190709180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 07 September 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 15,
+  "NAMA SISWA": "MUHAMMAD ZAFRAN WAHYUDI",
+  "NIK": "3509191408180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 14 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 18,
+  "NAMA SISWA": "DENTA KAIFAN RAFIZKY",
+  "NIK": "3509192108180004",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 21 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 22,
+  "NAMA SISWA": "ALEA SHABIRA NITAKA",
+  "NIK": "3509196701190001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 27 Januari 2019",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 23,
+  "NAMA SISWA": "DIVA PUTRI MEILINDA",
+  "NIK": "3509195205180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 12 Mei 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 24,
+  "NAMA SISWA": "ANINDI SAFINA HADIYANI",
+  "NIK": "3509196904180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 29 April 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 25,
+  "NAMA SISWA": "SYAFIQAH GHANIA ALMAHYRA",
+  "NIK": "3509066310180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 23 Oktober 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 28,
+  "NAMA SISWA": "MOCH. IRFAN ILHAM SYAH",
+  "NIK": "3509190302190000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 03 Februari 2019",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 31,
+  "NAMA SISWA": "ABIMANYU GIBRAN ARYA PRATAMA",
+  "NIK": "3509200501180004",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 05 Januari 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 32,
+  "NAMA SISWA": "ALESHA NADA ASSYIFA",
+  "NIK": "3509196709180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 27 September 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 35,
+  "NAMA SISWA": "ARYA ALVIAN KHALIF",
+  "NIK": "3509192010180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 20 Oktober 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 36,
+  "NAMA SISWA": "QANITA BINTANG MIKKHAYLA",
+  "NIK": "3509195107180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 Juli 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 37,
+  "NAMA SISWA": "KHOIRUNISSA LUNA RIFANDI",
+  "NIK": "3510136609180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 15 September 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 38,
+  "NAMA SISWA": "ARSYIFA HAZNA KAMALIYAH",
+  "NIK": "3509196508180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 25 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 39,
+  "NAMA SISWA": "RAISYA APRILLIA MAHARANI",
+  "NIK": "3509195804190003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 19 April 2019",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 43,
+  "NAMA SISWA": "ABIMANA ARKAAN ARTANABIL ASIALIGHT",
+  "NIK": "3509210808180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 08 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 45,
+  "NAMA SISWA": "VIAN SYAKIR MUHADZIB",
+  "NIK": "3509191808180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 18 Agustus 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 47,
+  "NAMA SISWA": "ABRISAM GHADI BRIAN RABBANI",
+  "NIK": "3509192409180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 24 September 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 49,
+  "NAMA SISWA": "AMIRA AZ ZAHRA ALFAITUNNISA",
+  "NIK": "3509196811180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 28 November 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 57,
+  "NAMA SISWA": "KARINA AYUNINDYA",
+  "NIK": "3509196403180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 24 Maret 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 58,
+  "NAMA SISWA": "KIRANA AYUNINDYA",
+  "NIK": "3509196403180004",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 24 Maret 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 62,
+  "NAMA SISWA": "AHMAD SAHRI RAMADANI",
+  "NIK": "3509211705180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 17 Mei 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 63,
+  "NAMA SISWA": "RAFFASYA ALFARIZQI FIRMANSYAH",
+  "NIK": "3509191209180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 12 September 2018",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 68,
+  "NAMA SISWA": "ALMIRA HANA SYAKIRA",
+  "NIK": "3509194602190005",
+  "TEMPAT TANGGAL LAHIR": "BANYUWANGI, 02 Juni 2019",
+  "STATUS": "DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 1,
+  "NAMA SISWA": "HAIKAL ALI BAIHAQI",
+  "NIK": "3509190810180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 08 Oktober 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 3,
+  "NAMA SISWA": "ADZKIYA SHEZI IRAWAN",
+  "NIK": "3509195609180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 16 September 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 5,
+  "NAMA SISWA": "MUHAMMAD TIO AL SHIBY",
+  "NIK": "3509190312180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 03 Desember 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 6,
+  "NAMA SISWA": "AHMAD REHAN PUTRA DARMAWAN",
+  "NIK": "3509192012180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 20 Desember 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 7,
+  "NAMA SISWA": "ARASELY SALSABILLA MACHEL",
+  "NIK": "3509196101180004",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 21 Januari 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 11,
+  "NAMA SISWA": "LENTERA QIANA AZKADINA",
+  "NIK": "3509195806180007",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 18 Juni 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 13,
+  "NAMA SISWA": "ZEFA RASYA ZAKY",
+  "NIK": "3509191903180002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 19 Maret 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 16,
+  "NAMA SISWA": "SAILENDRA ARKHAN WIJAYANTO",
+  "NIK": "3509192703180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 27 Maret 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 17,
+  "NAMA SISWA": "FARIZA AZKIA AGESTY",
+  "NIK": "3508104108180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 01 Agustus 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 19,
+  "NAMA SISWA": "AZRIL RAHANDIKA PURWANTO",
+  "NIK": "3509211412180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 14 Desember 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 20,
+  "NAMA SISWA": "MAURA RIGA PUTRI",
+  "NIK": "3509194504190002",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 05 April 2019",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 21,
+  "NAMA SISWA": "MUHAMMAD ARGA ZAVIER AMANULLAH",
+  "NIK": "3509191212180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 12 Desember 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 26,
+  "NAMA SISWA": "PARAMAYOGA WAHYU FAREZI",
+  "NIK": "3509191108180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 Agustus 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 27,
+  "NAMA SISWA": "AZKIYA PUTRI ALFAUZAN",
+  "NIK": "3509214605180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 06 Mei 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 29,
+  "NAMA SISWA": "IBRAHIM MANENDRA PUTRA",
+  "NIK": "3509190510180000",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 05 Oktober 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 30,
+  "NAMA SISWA": "MALKA QUTHBIE ZAYAN",
+  "NIK": "3510211706180001",
+  "TEMPAT TANGGAL LAHIR": "BANYUWANGI, 17 Juni 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 33,
+  "NAMA SISWA": "ZAFARINA PUTRI LATIFA",
+  "NIK": "3509196806180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 28 Juni 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 40,
+  "NAMA SISWA": "MUHAMMAD RAIHAN AZKA PUTRA DHIAUR ROHMAN ",
+  "NIK": "3509170304180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 03 April 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 41,
+  "NAMA SISWA": "SYABIAN SYAZANI ARDIANSYAH",
+  "NIK": "3509195709180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 17 September 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 42,
+  "NAMA SISWA": "YARA RAESHA HAZWAN",
+  "NIK": "3509194710180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 07 Oktober 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 46,
+  "NAMA SISWA": "NUFAN SYAWALUNA DINANTI ",
+  "NIK": "3509195806180003",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 18 Juni 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 48,
+  "NAMA SISWA": "MUHAMMAD HAIKAL ALI PRATAMA",
+  "NIK": "3509211111180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 November 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 50,
+  "NAMA SISWA": "AZKADITTA RAFAEYZA ARZANKA",
+  "NIK": "3175073007180008",
+  "TEMPAT TANGGAL LAHIR": "JAKARTA, 30 Juli 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 51,
+  "NAMA SISWA": "KEINDRA RAFFASYA OKTARIAN",
+  "NIK": "3510160910180004",
+  "TEMPAT TANGGAL LAHIR": "BANYUWANGI, 09 Oktober 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 52,
+  "NAMA SISWA": "AULIA ZIZI SHALIMAR",
+  "NIK": "3509196504190001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 25 April 2019",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 54,
+  "NAMA SISWA": "SHANUM AQILA ASHEEQA",
+  "NIK": "3509194401190005",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 04 Januari 2019",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 55,
+  "NAMA SISWA": "BILQIS NUR MAULIDDIYAH",
+  "NIK": "3509196812170001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 28 Desember 2017",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 56,
+  "NAMA SISWA": "MUHAMMAD AKBAR AL KAHFI",
+  "NIK": "3509192208180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 22 Agustus 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 59,
+  "NAMA SISWA": "ARSYLA QUEENSHA NUGRAHANI",
+  "NIK": "3511024112170001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 01 Desember 2017",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 61,
+  "NAMA SISWA": "ALMEIRA SHAFA MUSLIFAH",
+  "NIK": "3509216205180001",
+  "TEMPAT TANGGAL LAHIR": "MALANG, 22 Mei 2018",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 64,
+  "NAMA SISWA": "FLORI JENAR ARUNA",
+  "NIK": "3509195101190001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 11 Januari 2019",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 65,
+  "NAMA SISWA": "MEISYA CARLA ALEXANDER",
+  "NIK": "3509194801190001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 08 Januari 2019",
+  "STATUS": "TIDAK DITERIMA"
+ },
+ {
+  "NO PENDAFTARAN": 67,
+  "NAMA SISWA": "NOUREEN ALISHA AGUNG",
+  "NIK": "3509194512180001",
+  "TEMPAT TANGGAL LAHIR": "JEMBER, 05 Desember 2018",
+  "STATUS": "TIDAK DITERIMA"
+ }
+];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cek kelulusan berdasarkan NIK
+            document.getElementById('btnCekKelulusan').addEventListener('click', function() {
+                const nik = document.getElementById('inputNik').value.trim();
+                const resultContainer = document.getElementById('resultContainer');
+                const statusBadge = document.getElementById('statusBadge');
+                
+                if (!nik) {
+                    alert('Masukkan NIK siswa');
+                    return;
+                }
+                
+                if (nik.length !== 16) {
+                    alert('NIK harus terdiri dari 16 digit');
+                    return;
+                }
+
+                // Cari data berdasarkan NIK
+                const result = graduationData.find(item => item.NIK === nik);
+                
+                if (result) {
+                    // Tampilkan hasil
+                    document.getElementById('resultNoPendaftaran').textContent = result["NO PENDAFTARAN"] || '-';
+                    document.getElementById('resultNama').textContent = result["NAMA SISWA"] || '-';
+                    document.getElementById('resultTtl').textContent = result["TEMPAT TANGGAL LAHIR"] || '-';
+                    document.getElementById('resultNik').textContent = result.NIK || '-';
+                    
+                    // Set status
+                    const status = result.STATUS;
+                    statusBadge.textContent = status;
+                    
+                    // Set kelas berdasarkan status
+                    if (status === "DITERIMA") {
+                        resultContainer.className = "result-card p-4 mt-4 accepted";
+                        statusBadge.className = "status-badge status-accepted";
+                        launchConfetti();
+                    } else {
+                        resultContainer.className = "result-card p-4 mt-4 rejected";
+                        statusBadge.className = "status-badge status-rejected";
+                    }
+                    
+                    // Tampilkan hasil
+                    resultContainer.style.display = 'block';
+                    
+                    // Scroll ke hasil
+                    resultContainer.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert('Data tidak ditemukan. Pastikan NIK yang dimasukkan benar.');
+                    resultContainer.style.display = 'none';
+                }
+            });
+            
+            // Fungsi untuk download hasil sebagai PDF
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+                
+                // Data yang akan diunduh
+                const noPendaftaran = document.getElementById('resultNoPendaftaran').textContent;
+                const nama = document.getElementById('resultNama').textContent;
+                const ttl = document.getElementById('resultTtl').textContent;
+                const nik = document.getElementById('resultNik').textContent;
+                const status = document.getElementById('statusBadge').textContent;
+                
+                // Logo sekolah (ganti dengan path logo Anda)
+                const logoUrl = 'logosekolah.png';
+                
+                // Buat PDF
+                doc.addImage(logoUrl, 'PNG', 15, 10, 30, 30);
+                doc.setFontSize(16);
+                doc.setTextColor(40);
+                doc.text('SDN KEPATIHAN 01', 50, 20);
+                doc.setFontSize(12);
+                doc.text('PENGUMUMAN PENERIMAAN MURID BARU', 50, 28);
+                doc.text('TAHUN AJARAN 2025/2026', 50, 35);
+                
+                // Garis pemisah
+                doc.setDrawColor(200);
+                doc.line(15, 40, 195, 40);
+                
+                // Judul dokumen
+                doc.setFontSize(14);
+                doc.setTextColor(50);
+                doc.text('HASIL SELEKSI PENERIMAAN MURID BARU', 105, 50, null, null, 'center');
+                
+                // Data siswa
+                doc.setFontSize(12);
+                doc.text('Nomor Pendaftaran:', 20, 70);
+                doc.text(noPendaftaran, 60, 70);
+                
+                doc.text('Nama Siswa:', 20, 80);
+                doc.text(nama, 60, 80);
+                
+                doc.text('Tempat/Tgl Lahir:', 20, 90);
+                doc.text(ttl, 60, 90);
+                
+                doc.text('NIK:', 20, 100);
+                doc.text(nik, 60, 100);
+                
+                // Status
+                doc.setFontSize(14);
+                doc.text('STATUS:', 20, 120);
+                
+                if (status === "DITERIMA") {
+                    doc.setTextColor(0, 128, 0);
+                    doc.text('DITERIMA', 50, 120);
+                    doc.text('Selamat! Anda diterima di SDN Kepatihan 01', 105, 130, null, null, 'center');
+                } else {
+                    doc.setTextColor(255, 0, 0);
+                    doc.text('TIDAK DITERIMA', 50, 120);
+                    doc.text('Terima kasih telah mendaftar di SDN Kepatihan 01', 105, 130, null, null, 'center');
+                }
+                
+                // Footer
+                doc.setFontSize(10);
+                doc.setTextColor(100);
+                doc.text('Dokumen ini dicetak secara otomatis pada ' + new Date().toLocaleString(), 105, 150, null, null, 'center');
+                doc.text('© 2025 SDN Kepatihan 01 - Jember', 105, 155, null, null, 'center');
+                
+                // Simpan PDF
+                doc.save('Pengumuman_Penerimaan_' + nama.replace(/\s/g, '_') + '.pdf');
+            });
+            
+            // Back to Top Button
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            window.onscroll = function () {
+              backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+            };
+            backToTopBtn.onclick = function () {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            };
+
+            // Dark Mode
+            const toggle = document.getElementById("darkModeToggle");
+            toggle.addEventListener("change", function () {
+              document.body.classList.toggle("dark-mode", toggle.checked);
+            });
+
+            // Jalankan efek ketikan saat pertama kali load
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
+<!-- Tombol Back to Top -->
+<button id="backToTopBtn" title="Kembali ke Atas"><i class="fas fa-arrow-up"></i></button>
+<!-- Toggle Dark Mode -->
+<div class="form-check form-switch position-fixed bottom-0 end-0 m-4 z-3">
+<input class="form-check-input" id="darkModeToggle" type="checkbox"/>
+<label class="form-check-label text-dark" for="darkModeToggle">Dark Mode</label>
+</div>
+</body>
+</html>
