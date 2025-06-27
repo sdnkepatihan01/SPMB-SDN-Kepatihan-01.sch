@@ -408,6 +408,24 @@ body.dark-mode .btn-outline-primary {
     color: white;
 }
 
+/* Jadwal Daftar Ulang Styles */
+#jadwalDaftarUlang {
+    animation: fadeIn 0.8s ease-out;
+    border: 1px solid #e0e0e0;
+    margin-top: 20px;
+    display: none;
+}
+
+body.dark-mode #jadwalDaftarUlang {
+    background-color: #2d2d2d !important;
+    border-color: #444;
+}
+
+#jadwalDaftarUlang h5 {
+    color: var(--secondary);
+    font-weight: 700;
+}
+
 </style>
 </head>
 <body>
@@ -585,6 +603,26 @@ body.dark-mode .btn-outline-primary {
                 <button id="downloadBtn" class="download-btn">
                     <i class="fas fa-download me-2"></i> Unduh Hasil
                 </button>
+            </div>
+        </div>
+        
+        <!-- Jadwal Daftar Ulang -->
+        <div id="jadwalDaftarUlang" class="mt-4 p-3 text-center">
+            <h5 class="fw-bold mb-3">JADWAL DAFTAR ULANG</h5>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="alert alert-success">
+                        <i class="fas fa-calendar-alt me-2"></i> 
+                        <strong>Tanggal:</strong> 30 Juni - 2 Juli 2025<br>
+                        <i class="fas fa-clock me-2"></i> 
+                        <strong>Jam:</strong> 07.00 - 12.00 WIB<br>
+                        <i class="fas fa-map-marker-alt me-2"></i> 
+                        <strong>Tempat:</strong> Sekretariat SPMB SDN Kepatihan 01<br>
+                        <i class="fas fa-file-alt me-2"></i> 
+                        <strong>Dokumen yang dibawa:</strong> FC Akta Kelahiran, FC KK, dan Pas Foto 3x4
+                    </div>
+                    <p class="text-muted">*Bagi siswa yang diterima wajib melakukan daftar ulang sesuai jadwal di atas</p>
+                </div>
             </div>
         </div>
     </div>
@@ -1199,6 +1237,7 @@ body.dark-mode .btn-outline-primary {
                 const nik = document.getElementById('inputNik').value.trim();
                 const resultContainer = document.getElementById('resultContainer');
                 const statusBadge = document.getElementById('statusBadge');
+                const jadwalDaftarUlang = document.getElementById('jadwalDaftarUlang');
                 
                 if (!nik) {
                     alert('Masukkan NIK siswa');
@@ -1228,10 +1267,12 @@ body.dark-mode .btn-outline-primary {
                     if (status === "DITERIMA") {
                         resultContainer.className = "result-card p-4 mt-4 accepted";
                         statusBadge.className = "status-badge status-accepted";
+                        jadwalDaftarUlang.style.display = 'block';
                         launchConfetti();
                     } else {
                         resultContainer.className = "result-card p-4 mt-4 rejected";
                         statusBadge.className = "status-badge status-rejected";
+                        jadwalDaftarUlang.style.display = 'none';
                     }
                     
                     // Tampilkan hasil
@@ -1242,6 +1283,7 @@ body.dark-mode .btn-outline-primary {
                 } else {
                     alert('Data tidak ditemukan. Pastikan NIK yang dimasukkan benar.');
                     resultContainer.style.display = 'none';
+                    jadwalDaftarUlang.style.display = 'none';
                 }
             });
             
@@ -1300,6 +1342,14 @@ body.dark-mode .btn-outline-primary {
                     doc.setTextColor(0, 128, 0);
                     doc.text('DITERIMA', 50, 120);
                     doc.text('Selamat! Anda diterima di SDN Kepatihan 01', 105, 130, null, null, 'center');
+                    
+                    // Tambahkan jadwal daftar ulang di PDF
+                    doc.setFontSize(12);
+                    doc.setTextColor(0, 0, 0);
+                    doc.text('JADWAL DAFTAR ULANG:', 20, 150);
+                    doc.text('Tanggal: 30 Juni - 2 Juli 2025', 20, 160);
+                    doc.text('Jam: 07.00 - 12.00 WIB', 20, 170);
+                    doc.text('Tempat: Sekretariat SPMB SDN Kepatihan 01', 20, 180);
                 } else {
                     doc.setTextColor(255, 0, 0);
                     doc.text('TIDAK DITERIMA', 50, 120);
@@ -1309,8 +1359,8 @@ body.dark-mode .btn-outline-primary {
                 // Footer
                 doc.setFontSize(10);
                 doc.setTextColor(100);
-                doc.text('Dokumen ini dicetak secara otomatis pada ' + new Date().toLocaleString(), 105, 150, null, null, 'center');
-                doc.text('© 2025 SDN Kepatihan 01 - Jember', 105, 155, null, null, 'center');
+                doc.text('Dokumen ini dicetak secara otomatis pada ' + new Date().toLocaleString(), 105, 200, null, null, 'center');
+                doc.text('© 2025 SDN Kepatihan 01 - Jember', 105, 205, null, null, 'center');
                 
                 // Simpan PDF
                 doc.save('Pengumuman_Penerimaan_' + nama.replace(/\s/g, '_') + '.pdf');
