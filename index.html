@@ -850,6 +850,31 @@ body.dark-mode #jadwalDaftarUlang {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
+        // Data dummy untuk simulasi (gantikan dengan data asli atau koneksi ke database)
+        const dummyData = [
+            {
+                "NO PENDAFTARAN": "SPMB-2025-001",
+                "NAMA SISWA": "Budi Santoso",
+                "TEMPAT TANGGAL LAHIR": "Jember, 15 Januari 2019",
+                "NIK": "1234567890123456",
+                "STATUS": "DITERIMA"
+            },
+            {
+                "NO PENDAFTARAN": "SPMB-2025-002",
+                "NAMA SISWA": "Ani Wijaya",
+                "TEMPAT TANGGAL LAHIR": "Jember, 20 Februari 2019",
+                "NIK": "2345678901234567",
+                "STATUS": "DITERIMA"
+            },
+            {
+                "NO PENDAFTARAN": "SPMB-2025-003",
+                "NAMA SISWA": "Citra Dewi",
+                "TEMPAT TANGGAL LAHIR": "Jember, 10 Maret 2019",
+                "NIK": "3456789012345678",
+                "STATUS": "TIDAK DITERIMA"
+            }
+        ];
+
         // Fungsi untuk membuka tab
         function openTab(tabName) {
             // Sembunyikan semua tab
@@ -906,36 +931,6 @@ body.dark-mode #jadwalDaftarUlang {
             }
         }
 
-        // Fungsi untuk mengambil data dari Google Sheets
-        async function fetchGraduationData() {
-            const sheetId = '1DhSdMg3TqqK_RnShG4Kjdj1TmoaaxqcEO-hyJxodN38';
-            const sheetName = 'Sheet1'; // Ganti dengan nama sheet yang sesuai
-            const apiKey = 'AIzaSyBg3xOQr3xY4QkH3-9JjWY5Z5v5Z5v5Z5v'; // Ganti dengan API key Anda jika diperlukan
-            
-            try {
-                const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${apiKey}`);
-                const data = await response.json();
-                
-                if (data.values && data.values.length > 1) {
-                    // Konversi array 2D ke array of objects
-                    const headers = data.values[0];
-                    const rows = data.values.slice(1);
-                    
-                    return rows.map(row => {
-                        const obj = {};
-                        headers.forEach((header, index) => {
-                            obj[header] = row[index] || '';
-                        });
-                        return obj;
-                    });
-                }
-                return [];
-            } catch (error) {
-                console.error('Error fetching data from Google Sheets:', error);
-                return [];
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', function() {
             // Set current date
             document.getElementById('printDate').textContent = new Date().toLocaleString();
@@ -963,8 +958,8 @@ body.dark-mode #jadwalDaftarUlang {
                 btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Memeriksa...';
                 
                 try {
-                    // Ambil data dari Google Sheets
-                    const graduationData = await fetchGraduationData();
+                    // Gunakan data dummy sebagai pengganti Google Sheets
+                    const graduationData = dummyData;
                     
                     // Cari data berdasarkan NIK (sebagai string)
                     const result = graduationData.find(item => item.NIK && item.NIK.toString().trim() === nik);
